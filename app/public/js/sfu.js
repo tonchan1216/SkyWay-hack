@@ -115,8 +115,6 @@ $(function() {
     c_room = peer.joinRoom('sfu_text_' + roomID, {mode: 'sfu'});
 
     c_room.on('open', function() {
-      $('#text').focus();
-
       c_room.getLog();
       c_room.once('log', logs => {
         for (let i = 0; i < logs.length; i++) {
